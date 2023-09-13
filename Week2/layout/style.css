@@ -1,33 +1,51 @@
-.header{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
     text-align: center;
     border: 2px solid black;
     background-color: green;
+    padding: 10px;
 }
-.nav{
+
+.nav {
     text-align: center;
     border: 2px solid black;
     background-color: rgb(26, 147, 184);
+    padding: 10px;
 }
-.menu{
+
+.content {
+    display: inline-block;
+    width: 100%;
+}
+
+.menu {
     text-align: center;
     border: 2px solid black;
     background-color: blue;
     width: 200px;
     height: 400px;
     display: inline-block;
+    vertical-align: top;
 }
 
-.container{
-    display: inline-block;
+.container {
     text-align: center;
     border: 2px solid black;
     background-color: yellow;
-    width: 700px;
+    width: calc(100% - 220px);
     height: 400px;
+    display: inline-block;
+    vertical-align: top;
 }
-.footer{
+
+.footer {
     text-align: center;
     border: 2px solid black;
     background-color: orange;
-    margin-top: 400px;
+    padding: 10px;
+    clear: both;
 }
