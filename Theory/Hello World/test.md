@@ -1,1 +1,0 @@
-This md file is to test git ignore functionality.
