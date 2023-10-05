@@ -1,4 +1,6 @@
 function addBook() {
+
+    
     const book = document.getElementById('title').value;
     const author = document.getElementById('author').value;
 
@@ -6,10 +8,8 @@ function addBook() {
     const bookEntry = document.createElement('div');
     bookEntry.classList.add('book-entry'); 
     const bookelement = document.createElement('p');
-    bookelement.textContent = 'Book: ' + book;
+    bookelement.textContent = `"${book}" by ${author}`;
 
-    const authorelement = document.createElement('p');
-    authorelement.textContent = 'Author: ' + author;
 
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
@@ -19,7 +19,6 @@ function addBook() {
     });
 
     bookEntry.appendChild(bookelement);
-    bookEntry.appendChild(authorelement);
     bookEntry.appendChild(removeButton);
 
     div.appendChild(bookEntry);
