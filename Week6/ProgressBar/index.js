@@ -1,21 +1,23 @@
 const parent = document.getElementById("par");
 let child = parent.firstElementChild;
+const nextbtn = document.getElementById('nxtBtn')
+const prevbtn = document.getElementById('preBtn')
 
 function forward() {
+    if(child.previousElementSibling==null){
+        prevbtn.disabled=false;
+    }
     if(child.classList.contains('active'))
     {
-        if(child.nextElementSibling !=null) {
-            child=child.nextElementSibling;
-            child.classList.toggle('active');
-            if(child.nextElementSibling==null)
-                return;
-            else {
-                child=child.nextElementSibling;
-                child.classList.toggle('active');
-            }
+        child=child.nextElementSibling;
+        child.classList.toggle('active');
+        if(child.nextElementSibling==null){
+            nextbtn.disabled=true;
+            return;
         }
         else {
-            return;
+            child=child.nextElementSibling;
+            child.classList.toggle('active');
         }
     }
     else {
@@ -26,6 +28,9 @@ function forward() {
 }
 
 function previous() {
+    if(child.nextElementSibling==null){
+        nextbtn.disabled=false;
+    }
     if(child.classList.contains('active'))
     {
         child.classList.remove('active');
@@ -36,8 +41,10 @@ function previous() {
         if(child.previousElementSibling) {
             child=child.previousElementSibling;
             child.classList.remove('active');
-            if(child.previousElementSibling==null)
+            if(child.previousElementSibling==null){
+                prevbtn.disabled=true;
                 return;
+            }
             else {
                 child=child.previousElementSibling;
                 child.classList.remove('active');
