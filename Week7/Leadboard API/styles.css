@@ -2,8 +2,32 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
-.display {
+.data {
     display: flex;
     justify-content: center;
+    width: 100%;
+    gap: 40px;
+}
+.display  {
+    width: 50%;
+}
+
+table {
+    width: 100%;
+}
+
+td{
+    border: 2px solid black;
+    font-size: 15px;
+}
+
+.add {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
